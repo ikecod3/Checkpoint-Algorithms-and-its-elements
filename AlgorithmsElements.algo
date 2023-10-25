@@ -1,0 +1,49 @@
+/* This is an algorithm that read a sentence, which ends with a point,
+character by character and determine:
+    The length of the sentence (the number of characters).
+    The number of words in the sentence (assuming that the words are separated by a single space).
+    The number of vowels in the sentence.
+*/
+
+ALGORITHM sentence_element_checking //defines algorithm name
+
+    // counter variable declarations and initializing
+VAR
+    char_count, word_count, vowel_count, i, space_count :INTEGER := 0;
+    sentence: STRING;
+
+BEGIN
+    //Read the sentence from user's input
+    Read(sentence)
+
+    // Loop through each word to check the values
+WHILE (i < sentence.length ) DO 
+    //if condition is TRUE proceed to check for word sepration (space character)
+    IF (sentence[i] = " ") THEN
+        space_count = space_count + 1
+    ELSE
+        char_count = char_count + 1
+    END_IF
+
+// Switch statement to check for vowel characters (a,e,i,o,,u)
+    SWITCH (sentence[i]) DO
+      case "a" : vowel_count = vowel_count + 1; BREAK;
+      case "e" : vowel_count = vowel_count + 1; BREAK;
+      case "i" : vowel_count = vowel_count + 1; BREAK;
+      case "o" : vowel_count = vowel_count + 1; BREAK;
+      case "u" : vowel_count = vowel_count + 1; BREAK;
+      default : vowel_count
+    END_SWITCH
+ // increment i by 1 on every iteration
+      i++
+END_WHILE
+
+    // Number of words in the sentence will be space_count + 1
+    word_count = space_count + 1
+
+    //print out values of counter variables
+    Write(char_count);
+    Write(word_count);
+    Write(vowel_count);
+
+END
