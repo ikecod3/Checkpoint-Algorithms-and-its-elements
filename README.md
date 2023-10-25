@@ -1,9 +1,9 @@
 # Checkpoint-Algorithms-and-its-elements
 
 This is an algorithm that read a sentence, which ends with a point, character by character and determine:
-    #The length of the sentence (the number of characters).
-    #The number of words in the sentence (assuming that the words are separated by a single space).
-    #The number of vowels in the sentence.
+    # The length of the sentence (the number of characters).
+    # The number of words in the sentence (assuming that the words are separated by a single space).
+    # The number of vowels in the sentence.
 
 I started by defining a suitable Algorithm name as: sentence_element_checking
 >> 1. Declare and initilize a counter varibales and string variable to store character, word, space, increment, vowel and length.
